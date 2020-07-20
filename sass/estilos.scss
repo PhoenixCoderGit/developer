@@ -1,0 +1,337 @@
+* {
+  box-sizing: border-box;
+}
+
+/* ==============================
+patron de colores 
+================================*/
+$principal: #00393b;
+$texto: #111111;
+$secundario: #99cc33;
+
+/* para movil minimo 15px. Fuenta base*/
+html {
+  font-size: 15px;
+}
+
+body {
+  font-family: "Open Sans", "sans-serif";
+}
+
+.bienvenidos {
+  background-image: url("../images/AMT-fondo-encabezado2.png");
+  color: #fff;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.bienvenidos2 {
+  background-image: url("../images/AMT-fondo-encabezado2.png");
+  color: #fff;
+  background-size: cover;
+  height: 40vh;
+  display: flex;
+  flex-direction: column;
+}
+.encabezado {
+  background: #fff;
+  color: $texto;
+  padding: 0.5rem 0;
+}
+
+.logo {
+  padding-top: 10px;
+
+  height: 80px;
+}
+
+/* estilos para boton:buscar y menu */
+.boton-buscar,
+.boton-menu {
+  color: $texto;
+  background: transparent;
+  border: 0;
+  /* tamano */
+  font-size: 2rem;
+  padding: 0.5rem;
+}
+
+/* desaparezca el foco */
+.boton-buscar:focus,
+.boton-menu:focus {
+  outline: 0;
+}
+
+.boton-buscar {
+  margin-left: auto;
+  margin-right: 0.5rem;
+}
+
+/*====================== 
+estilos boque busccar 
+=======================*/
+#bloque-buscar {
+  flex: 1 1 100%;
+}
+
+.contenedor-bloque-buscar {
+  display: flex; //padre contenedor
+  //herada el tamano del padre
+  height: 3rem; //alto
+  margin: 1rem 0;
+}
+
+.contenedor-bloque-buscar input[type="text"] {
+  border: 0; //quitar borde por defecto
+  border-radius: 5px 0 0 5px;
+  padding: 1rem;
+  flex: 1 1 auto;
+}
+
+//boton
+.contenedor-bloque-buscar input[type="submit"] {
+  flex: 1 1 100%;
+  border: 0;
+  border-radius: 0 5px 5px 0;
+  background: $principal;
+  color: #fff;
+  flex: 0 1 auto;
+  padding: 0 1rem;
+}
+
+#menu-principal {
+  flex: 1 1 100%;
+}
+
+#menu-principal ul {
+  padding: 0;
+  list-style: none;
+  margin: 1rem 0 0 0;
+}
+
+#menu-principal ul a {
+  display: block;
+  padding: 0.8rem 0;
+  text-align: center;
+  color: $principal;
+  text-transform: uppercase;
+  border-top: 1px solid rgb(134, 125, 125);
+  text-decoration: none;
+}
+
+#menu-principal ul a:hover,
+#menu-principal ul li.active a {
+  color: $principal;
+}
+
+.texto-encabezado {
+  text-align: center;
+  color: #fff;
+  display: flex;
+  flex: 1 1 auto;
+  align-items: center;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: $principal;
+  border-color: transparent;
+  margin-top: 1rem;
+  transition: all 1s ease;
+}
+
+.btn-primary:not(:disabled):not(.disabled):active,
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: $secundario;
+  border-color: transparent;
+}
+
+.texto-encabezado .display-4 {
+  margin-top: 6rem;
+}
+
+.flecha-bajar {
+  /* display: inline-block; */
+  text-align: center;
+  font-size: 4rem;
+  animation: fecha-animado 2s ease-in-out infinite;
+}
+
+.flecha-bajar a {
+  color: #fff;
+}
+
+@keyframes fecha-animado {
+  from {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(8px);
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}
+
+/*=======================================
+SECCION
+========================================*/
+.agencia {
+  background: $principal;
+  color: #fff;
+}
+
+/*=======================================
+SECCION
+========================================*/
+.somos-tu-mejor-eleccion h2 span {
+  color: $principal;
+}
+
+
+.somos-tu-mejor-eleccion ul li {
+  list-style: none;
+  min-height: 9rem;
+}
+
+.somos-tu-mejor-eleccion .svg-inline--fa {
+  font-size: 1rem;
+  border-radius: 50%;
+  background: $principal;
+  width: 5rem;
+  height: 5rem;
+  line-height: 5rem;
+  padding: 1rem;
+  color: #fff;
+  margin-top: 1rem;
+}
+
+.somos-tu-mejor-eleccion ul li .contenedor-eleccion h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-top: .8rem;
+}
+
+/*=======================================
+SECCION
+========================================*/
+.servicios img {
+  flex: 0 0 80px;
+  overflow: hidden;
+  margin-right: 1rem;
+}
+
+.servicios h2 {
+  color: #fff;
+}
+
+.servicios {
+  background: url("../images/AMT-fondo-encabezado2.png") no-repeat center;
+  background-size: cover;
+}
+
+.servicios img {
+  font-size: 1rem;
+  border-radius: 50%;
+  background: $principal;
+  width: 5rem;
+  height: 5rem;
+  padding: .5rem;
+  color: #fff;
+
+}
+
+.servicios article {
+  display: flex;
+  align-items: center;
+  margin: 1rem 0;
+}
+
+.servicios h3 {
+  font-size: 1.6rem;
+  flex: 1 1 auto;
+}
+
+.servicios h3 a {
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-decoration: none;
+}
+
+//pseudoelemento
+.servicios h3 a::after {
+  content: "\f054";
+  font-family: FontAwesome;
+  font-size: 2.5rem;
+  margin-left: 1rem;
+  opacity: .5;
+  position: relative; //podemos agregar diversas propiedades
+  left: 0;
+  transition: all .5s ease;
+}
+
+.servicios h3 a:hover::after {
+  left: -1rem;
+  opacity: .5rem;
+  color: $principal;
+}
+
+
+/*=======================================
+SECCION PIE DE PAGINA
+========================================*/
+.piedepagina {
+  background: $texto;
+  color: #fff;
+  text-align: center;
+  font-size: 1rem;
+}
+
+.piedepagina .redesSociales {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+
+}
+
+.piedepagina .redesSociales a {
+  color: #fff;
+  font-size: 1rem;
+  margin: 0 .5rem;
+  opacity: .7;
+  transition: all 1s ease;
+}
+
+.piedepagina .redesSociales a:hover {
+  color: #fff;
+  font-size: 1rem;
+  margin: 0 .5rem;
+  opacity: .1;
+
+}
+
+.ir-arriba {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  font-size: 3rem;
+  color: $principal;
+  text-decoration: none;
+  z-index: 99999;
+  line-height: 0;
+  transition: all 1s ease;
+}
+
+.ir-arriba:hover,
+.ir-arriba:focus
+{
+  text-decoration: none;
+  color: $secundario;
+}

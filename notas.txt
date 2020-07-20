@@ -1,0 +1,85 @@
+mobile:
+320 * 272
+
+flexbox:
+1 Regla: Por menos tiene que tener un hijo el padre
+anchura depende cantidad de contenido
+altura depende del contenedor del padre
+
+2 Regla: El Flex container tiene 2 ejes
+padre = flex container
+hijo = flex item
+
+eje principal = horizontal
+eje secundario = vertical
+
+3 Regla: Podemos modificar el eje principal con la
+propiedad flex-direction
+row - horizontal - por defecto
+column - vertical
+
+4 Regla: Podemos permitir el salto de columnas con flex-wrap
+flex-wrap: nowrap; --defecto no salta
+flex-wrap:wrap; --salto cuando no haya espacio en el contenedor
+
+5 Regla: Alineamos elementos en el eje principal con justify-content.
+******Alinea los hijos en el eje principal(vertical o horizontal)*******
+justifay-content: flex-start; ---defecto alineado izquierda [*** ]
+justifay-content: space-between: --alinea [* * *]
+justifay-content: flex-end; ---alinea [ ***]
+justifay-content: center; ---alinea centro [ *** ]
+justifay-content: space-around; ---alinea [ * * * ]
+
+6 Regla: Alineamos elementos(hijos) en el eje secundario con align-items.
+flex-start
+flex-end
+center  --- 
+stretch --- defecto Todo el espacio del padre
+baseline////
+
+7 Regla: Podemos alinear los elementos hijos de forma individual en el eje
+secundario con align-self.
+
+align-self: flex-start, flex-...
+
+8 Regla: Los hijos flexibles ignoran propiedades como float, clear, vertical-align
+el padre no.
+
+**************************************************************************************
+9 Regla: Podemos modificar el tamano de los hijos con flex-grow, flex-shrink, flex-basis.
+Por defecto
+
+flex-grow: Define el tamano que crecera un hijo, en relacion a sus demas hermanos,
+cuando hay espacios disponible en el contenedor.
+su valor por defecto es 0.
+
+////
+flex-shrink: Define el tamano de reduccion de un hijo en relacion a sus demas hermanos,
+cuando falte espacio en el contenedor. 
+Por defecto es 1.
+
+flex-basis: Define el tamano incial del hijo.
+Su valor por defecto es auto.
+parecido al higth y whitd
+Con cero todos igual sin importar el contenido.
+
+10 Regla: Podemos resumir todo con la propiedad Flex
+flex: flex-grow flex-shrink flex-basis
+Ejem. flex: 0 1 0;
+
+order
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
